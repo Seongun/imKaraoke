@@ -5,9 +5,6 @@
 		<!-- <meta name="viewport" content="width=device-width"> -->
 		<title>imKaraoke</title> 
 
-		<!-- Bootstrap CSS -->
-<!-- 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- -->			
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
@@ -15,30 +12,29 @@
 		<div id ="searchScreen">
 			<div class="fullScreen">
 				<div id="searchArea">
+					<h1 class="title">Seizure-oke</h1>
+					<h1 class="sub-title">Spasms for your eyes, by your own voice</h1>
 					<input id="songSearch" placeholder="Type yo Song" /><br><br>
 					<input id="artistSearch" placeholder="Type yo Artist" /><br><br>
-					<button onclick="newSearch()">Get Me Started</button>
+					<button class="button" onclick="newSearch()">Get Me Started</button>
 				</div>
 			</div>
 		</div>
 
 
-		<div id ="singingScreen">
+		<div id ="singingScreen" style="display:none">
 			<div class="fullScreen">
-				<div id="backgroundCanvasPosition">
-
-				</div>
-				<div id="control menu">
+				<div id="control_menu">
+					<p id="speed"></p>
 					<div id="lyrics"></div>
-					<button onclick="startLyrics()">Get Me Singing</button>
-					<button onclick="switchView()">Go back to the other song</button>
+					<br>
+					<button  id="startLyricsButton" class="button" onclick="startLyrics()" id="startSinging">Get Me Singing</button>
+					
+					<button  class="button" id="returnButton" onclick="switchView()">Go back to sing another song</button>
 				</div>
-			
 			</div>
 		</div>
 
-		
-		
 	</div>
 
 
@@ -46,6 +42,7 @@
 		<script src="lib/p5.js"></script>
 		<script src="lib/p5.dom.js"></script>
 		<script src="lib/p5.sound.js"></script>
+		<script language="javascript" type="text/javascript" src="/lib/p5.scribble.js"></script>
 		<script type="text/javascript" src="scripts.js"></script>
 
 

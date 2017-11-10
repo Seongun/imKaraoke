@@ -1,0 +1,115 @@
+body, html{
+	width:100%;
+	height:100%;
+	
+	padding:0;
+	margin:0;
+
+}
+
+.title{
+
+	font-size: 2.5rem;
+	color: purple;
+
+}
+
+.sub-title{
+
+	font-size: 1.5rem;
+	color: blue;
+
+}
+
+
+.fullScreen{
+
+	text-align: center;
+	width:100%;
+	height:100%;
+
+}
+
+
+#searchArea{
+	position: absolute;
+	top: 30%;
+	width:100%;
+	text-align: center;
+
+
+}
+
+#songSearch{
+
+
+	text-align: left;
+	font-size: 1rem;
+	padding: 20px;
+	width: 50%;
+	border-width: 5px;
+	border-color: green;
+	border-style: solid;
+		
+}
+
+#artistSearch{
+	font-size: 1rem;
+	text-align: left;
+	padding: 20px;
+	width: 50%;
+	border-width: 5px;
+	border-color: yellow;
+	border-style: solid;
+}
+
+
+#control_menu{
+	position: absolute;
+	width: 100%;
+	bottom: 10%;
+}
+
+.button{	
+	width: 20%;
+	margin:auto;
+	padding: 15px 32px;
+	display: inline-block;
+	color: white;
+	background-color: #f44336;
+	border-color: white;
+	border-width: 2px;
+	border-style: solid;
+	text-decoration: none;
+
+}
+
+.button:hover{
+
+	color: #f44336;
+	background-color: white;
+	border-color: #f44336;
+	border-width: 2px;
+	border-style: solid;
+
+}
+
+#returnButton{
+	opacity: 0.5;
+}
+#returnButton:hover{
+	opacity:1;
+}
+
+#speed{
+	font-size: 1rem;
+	color:white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+#lyrics{
+	font-size: 4rem;
+	 color:white;
+	 text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
