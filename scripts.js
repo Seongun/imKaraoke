@@ -148,34 +148,44 @@ function parseLyrics(lyric){
 
 
 function startLyrics(){
-  
-    $("#returnButton").css("opacity", "");
 
-    if(!lyricsParsed){
-      alert("lyric not ready yet");
-      return 0;
+
+    if (confirm('Are you sure you want to give your eyes spasms?')) {
+      if (confirm('Are you sure sure?')) {
+         if (confirm("Okay...but you can't say I didn't warn you!")) {
+
+        $("#returnButton").css("opacity", "");
+
+        if(!lyricsParsed){
+          alert("lyric not ready yet");
+          return 0;
+        }
+
+        if(songPlaying){
+          console.log("song is already playing");
+          return 0;
+        }
+        lyricElement.html("Get Ready, lyrics are loading soon. Press <- -> to adjust lyrics speed!");
+        speedElement.html("Speed: " + (6000-speed).toString() );
+
+        songPlaying=true;
+        showBackground=true;
+        speed = 3000;
+        counter=0;
+
+
+        if(updateLyricId){
+            clearInterval(updateLyricId);
+            updateLyricId=null;
+        }
+        updateLyricId = setInterval(updateLyric, speed);
+        $("#startLyricsButton").hide();
+
+
+           }
+        }
     }
-
-    if(songPlaying){
-      console.log("song is already playing");
-      return 0;
-    }
-    lyricElement.html("Get Ready, lyrics are loading soon. Press <- -> to adjust lyrics speed!");
-    speedElement.html("Speed: " + (6000-speed).toString() );
-
-    songPlaying=true;
-    showBackground=true;
-    speed = 3000;
-    counter=0;
-
-
-    if(updateLyricId){
-        clearInterval(updateLyricId);
-        updateLyricId=null;
-    }
-    updateLyricId = setInterval(updateLyric, speed);
-    $("#startLyricsButton").hide();
-
+    
 }
 
 
