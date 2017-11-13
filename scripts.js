@@ -38,12 +38,15 @@ function switchView(){
     $("#singingScreen").show();
     $("#searchScreen").hide();
     isShowingSearchScreen=false;
+    $("#yourSong").html(title);
+    $("#yourArtist").html(artist);
 
   }else{
 
     $("#singingScreen").hide();
     $("#searchScreen").show();
     $("#startLyricsButton").show();
+    $("#instructions").show();
 
     isShowingSearchScreen=true;
 
@@ -165,7 +168,7 @@ function startLyrics(){
           console.log("song is already playing");
           return 0;
         }
-        lyricElement.html("Get Ready, lyrics are loading soon. Press <- -> to adjust lyrics speed!");
+        lyricElement.html("Get Ready, lyrics are loading soon.<br> Press <- , -> to decrease & increase lyrics' speed!");
         speedElement.html("Speed: " + (6000-speed).toString() );
 
         songPlaying=true;
@@ -180,6 +183,8 @@ function startLyrics(){
         }
         updateLyricId = setInterval(updateLyric, speed);
         $("#startLyricsButton").hide();
+         $("#instructions").hide();
+
 
 
            }
@@ -241,7 +246,7 @@ function setup() {
 function keyPressed() {
   if(updateLyricId){
 
-      if (keyCode === LEFT_ARROW && songPlaying) {
+      if (keyCode === LEFT_ARROW && songPlaying && speed < 6000) {
             console.log("changing speed");
 
           speed +=100;
@@ -249,12 +254,12 @@ function keyPressed() {
            updateLyricId = setInterval(updateLyric, speed);
           speedElement.html("Speed: " + (6000-speed).toString() );
 
-      } else if (keyCode === RIGHT_ARROW) {
+      } else if (keyCode === RIGHT_ARROW && speed > 0) {
             console.log("changing speed");
 
           speed -=100;  
           clearInterval(updateLyricId);
-          updateLyricId = setInterval(updateLyric, speed);
+          updateLyricId = setInterval(updateLyric, speed );
                speedElement.html("Speed: " + (6000-speed) );
 
       }

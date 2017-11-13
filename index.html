@@ -11,13 +11,13 @@
 		<!-- CONTENT GOES HERE -->
 		<div id ="searchScreen">
 			<div class="fullScreen">
-				<a href="./about.html" id="aboutlink" style="float: right"><h1>About<h1></a>
+				<a href="./about.html" id="aboutlink" style="float: right; position: absolute; top:0px; right:0px; color: orange"><h1>About Seizure-oke<h1></a>
 
 				<div id="searchArea">
 					<h1 class="title">Seizure-oke</h1>
 					<h1 class="sub-title">Spasms for your eyes, by your own voice</h1>
-					<input id="songSearch" placeholder="Type yo Song" /><br><br>
-					<input id="artistSearch" placeholder="Type yo Artist" /><br><br>
+					<input id="songSearch" placeholder="Pick a Song" /><br><br>
+					<input id="artistSearch" placeholder="Pick the Artist" /><br><br>
 					<button class="button" onclick="newSearch()">Get Me Started</button>
 				</div>
 			</div>
@@ -26,6 +26,14 @@
 
 		<div id ="singingScreen" style="display:none">
 			<div class="fullScreen">
+				<div id="instructions">
+					<p id="yourChoice"><span id="yourSong"></span> by 
+					<span id="yourArtist"></span></p>
+					<p><span class="title" style="font-size: 1.6rem">Instructions:</span><br> Press <- to decrease lyrics' speed<br>Press -> to increase lyric's speed <br>The lyrics will be stopped while you're making the changes, and the changes will be reflected from next run</p>
+					<p>Speed ranges from 0 ~ 6000, 6000 being the fastest and 0 being the slowest<br> 0 will render show new line of lyrics every 6 seconds, while 6000 will show new line almost instantly</p>
+
+				</div>
+
 				<div id="control_menu">
 					<p id="speed"></p>
 					<div id="lyrics"></div>

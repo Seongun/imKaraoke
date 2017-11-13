@@ -8,7 +8,7 @@ body, html{
 }
 
 .title{
-
+	text-align: center;
 	font-size: 2.5rem;
 	color: purple;
 
@@ -37,6 +37,13 @@ body, html{
 	width:100%;
 	text-align: center;
 
+
+}
+#yourChoice{
+
+	text-align: center;
+	color: blue;
+	font-size: 2rem;
 
 }
 
@@ -68,6 +75,22 @@ body, html{
 	position: absolute;
 	width: 100%;
 	bottom: 10%;
+}
+
+#instructions{
+
+	position: absolute;
+	width: 70%;
+	text-align: center;
+	top: 20%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: pink;
+
+	 left: 0; 
+  	 right: 0; 
+	 margin-left: auto; 
+	 margin-right: auto;
 }
 
 .button{	
@@ -120,10 +143,31 @@ body, html{
 }
 
 
+.sectionTitle{
+	text-align: center;
+	font-size: 1.5rem;
+}
 
+
+.aboutBox{
+	width: 50%;
+	margin: auto;	
+}
 .question{
 	text-align: left;
 /*	font-weight: bold;
 */	font-size: 1.2rem;
 }
+.question::before{
+	content: "\A\A\A";
+	white-space: pre
+}
+.question::after{
+	content: "\A\A";
+	white-space: pre
+}
 
+.paddingParagraph{
+	padding-bottom: 3rem;
+
+}
